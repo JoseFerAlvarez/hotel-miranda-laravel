@@ -33,33 +33,33 @@
             @foreach ($rooms as $room)
                 <div class="room room--list">
                     <div class="room__container room__container--grid">
-                        <div class="room__img room__img--grid" style="background-image: url('{{ $room[2] }}')">
+                        <div class="room__img room__img--grid" style="background-image: url('{{ url($room->photo) }}')">
                         </div>
                     </div>
                     <div class="room__data room__data--list">
-                        @if ($room[4] != '')
+                        @if ($room->amenities != '')
                             <div class="room__rules room__rules--list">
-                                @foreach (explode(',', $room[4]) as $amenitie)
+                                @foreach (explode(',', $room->amenities) as $amenitie)
                                     @if ($amenitie)
                                         <img class="room__rules__icon"
-                                            src="/src/assets/bladeicons/{{ str_replace(' ', '', strtolower($amenitie)) }}.svg">
+                                            src="{{ asset('assets/bladeicons/' . str_replace(' ', '', strtolower($amenitie)) . '.svg') }}">
                                     @endif
                                 @endforeach
                             </div>
                         @endif
                         <div class="room__data__text room__data__text--grid">
-                            <p class="room__data__text__title room__data__text__title--list">{{ $room[3] }}</p>
+                            <p class="room__data__text__title room__data__text__title--list">{{ $room->typeroom }}</p>
                             <p class="text-roboto room__data__text__description room__data__text__description--list">
-                                {{ $room[8] }}</p>
+                                {{ $room->cancellation }}</p>
                         </div>
                     </div>
                     <div class="room__data__properties room__data__properties--list">
                         <p class="room__data__properties__price room__data__properties__price--list">
-                            {{ $room[5] / 100 }}<span
+                            {{ $room->price / 100 }}<span
                                 class="room__data__properties__price__night room__data__properties__price__night--grid">/Night</span>
                         </p>
                         <hr>
-                        @if ($room[7])
+                        @if ($room->status)
                             <p class="room__data__properties__availability">Actually Booked</p>
                         @else
                             <p class="room__data__properties__availability">Booking Now</p>
@@ -75,7 +75,7 @@
     @endsection
 
     @section('scripts')
-        <script type="module" src="./src/js/index.js"></script>
+        <script type="module" src="{{asset("js/index.js")}}"></script>
     @endsection
 </body>
 

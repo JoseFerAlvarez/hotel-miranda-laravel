@@ -26,7 +26,8 @@
             <a href="/about-us.php"><button class="button button-dark header__button">LEARN MORE</button></a>
         </header>
 
-        <form class="availability" action="/availability.php" method="POST">
+        <form class="availability" action="{{ url('/room-list') }}" method="POST">
+            @csrf
             <div class="availability__date__container">
                 <div class="availability__date">
                     <p class="availability__text">Arrival Date</p>
