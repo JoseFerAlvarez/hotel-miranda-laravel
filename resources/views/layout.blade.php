@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css') }}" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css">
         <title>Document</title>
     @show
@@ -29,13 +29,17 @@
                 </div>
                 <div class="topbar__nav--desktop">
                     <ul class="topbar__nav__list">
-                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/about-us.php">About
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                                href="{{ url('/about-us') }}">About
                                 Us</a></li>
-                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-grid.php">Rooms</a>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                                href="{{ url('/rooms') }}">Rooms</a>
                         </li>
-                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-offers.php">Offers</a>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                                href="{{ url('/offers') }}">Offers</a>
                         </li>
-                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/details.php">Contact</a>
+                        <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                                href="{{ url('/contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -46,13 +50,15 @@
             </div>
             <div class="topbar__nav">
                 <ul class="topbar__nav__list">
-                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/about-us.php">About
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="{{ url('/about-us') }}">About
                             Us</a></li>
-                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-grid.php">Rooms</a>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="{{ url('/rooms') }}">Rooms</a>
                     </li>
-                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/room-offers.php">Offers</a>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                            href="{{ url('/offers') }}">Offers</a>
                     </li>
-                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="/details.php">Contact</a>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
+                            href="{{ url('/contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>

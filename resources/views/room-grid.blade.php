@@ -23,15 +23,15 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Ultimate Room</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a class="topbar__nav__anchor__a" href="#">Rooms</a>
+                <a class="topbar__nav__anchor__a" href="{{ url('/rooms') }}">Rooms</a>
             </div>
         </header>
 
         <section class="room-list">
             @foreach ($rooms as $room)
-                <a href="/room-details.php?id={{ $room->idroom }}">
+                <a href="{{ url('/rooms/' . $room->idroom) }}">
                     <div class="room room--grid">
                         <div class="room__container room__container--grid">
                             @if ($room->amenities != '')
@@ -77,7 +77,7 @@
     @endsection
 
     @section('scripts')
-        <script type="module" src="./src/js/index.js"></script>
+        <script type="module" src="{{asset("js/index.js")}}"></script>
     @endsection
 </body>
 

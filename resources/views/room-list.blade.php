@@ -23,9 +23,9 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Ultimate Room</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a class="topbar__nav__anchor__a" href="#">Rooms</a>
+                <a class="topbar__nav__anchor__a" href="{{ url('/rooms') }}">Rooms</a>
             </div>
         </header>
 

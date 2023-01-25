@@ -22,8 +22,8 @@
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">The Perfect Base For You</p>
-            <a href="/room-grid.php"><button class="button button-golden header__button">TAKE A TOUR</button></a>
-            <a href="/about-us.php"><button class="button button-dark header__button">LEARN MORE</button></a>
+            <a href="{{ url('/rooms') }}"><button class="button button-golden header__button">TAKE A TOUR</button></a>
+            <a href="{{ url('/about-us') }}"><button class="button button-dark header__button">LEARN MORE</button></a>
         </header>
 
         <form class="availability" action="{{ url('/room-list') }}" method="POST">
@@ -50,7 +50,7 @@
                     do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip ex ea commodo consequat.</p>
-                <a href="/room-grid.php"><button class="button button-golden about-data__discover__button">BOOK
+                <a href="{{ url('/rooms') }}"><button class="button button-golden about-data__discover__button">BOOK
                         NOW</button></a>
             </div>
 
@@ -140,7 +140,7 @@
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand this.
                     </p>
-                    <a href="/room-grid.php"><button class="button button-golden home-video__button--desktop">BOOK
+                    <a href="{{ url('/rooms') }}"><button class="button button-golden home-video__button--desktop">BOOK
                             NOW</button></a>
                 </div>
                 <div class="home-video__source">
@@ -299,7 +299,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                             <div class="food">
                                 <div class="food__img"
@@ -312,7 +312,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                             <div class="food">
                                 <div class="food__img"
@@ -325,7 +325,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -358,7 +358,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -372,7 +372,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -403,7 +403,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -417,7 +417,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -434,7 +434,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -448,7 +448,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -462,7 +462,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -490,7 +490,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -504,7 +504,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -518,7 +518,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -532,7 +532,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -546,7 +546,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -560,7 +560,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -578,7 +578,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -592,7 +592,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -606,7 +606,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -620,7 +620,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -634,7 +634,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
 
                             <div class="food">
@@ -648,7 +648,7 @@
                                         elit, sed do
                                         eiusmod tempor.</p>
                                 </div>
-                                <img class="food__arrow" src="./src/assets/icons/arrow.svg">
+                                <img class="food__arrow" src="{{ asset('assets/icons/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -722,11 +722,12 @@
     @endsection
 
     @section('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="{{ url('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js') }}"></script>
         <script type="module" src="{{asset("js/index.js")}}"></script>
         <script type="module" src="{{asset("js/slidersHome.js")}}"></script>
         <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzhp-gjeksjUKrCvu14fvTA5mAgX8noes&callback=initMap"></script>
+            src="{{ url('https://maps.googleapis.com/maps/api/js?key=AIzaSyAzhp-gjeksjUKrCvu14fvTA5mAgX8noes&callback=initMap') }}">
+        </script>
     @endsection
 </body>
 

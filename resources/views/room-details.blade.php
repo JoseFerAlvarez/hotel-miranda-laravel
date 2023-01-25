@@ -23,9 +23,9 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Ultimate Room</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a class="topbar__nav__anchor__a" href="#">Room Details</a>
+                <a class="topbar__nav__anchor__a" href="{{ url('/rooms') }}">Rooms</a>
             </div>
         </header>
 
@@ -48,14 +48,25 @@
                     </div>
                 </div>
 
-                {{-- <form class="room-details__availability" action="{{ $getAvailable }}" method="POST">
+                <form class="room-details__availability" action="{{ url('/rooms/' . $room->idroom) }}" method="POST">
+                    @csrf
                     <p class="room-details__availability__title">Check Availability</p>
                     <p class="room-details__availability__text">Check In</p>
                     <input class="input input__date--filled" type="date" name="checkin">
                     <p class="room-details__availability__text">Check Out</p>
                     <input class="input input__date--filled" type="date" name="checkout">
                     <input type="submit" class="button button-golden" value="CHECK AVAILABILITY"></button>
-                </form> --}}
+
+                    @if ($available)
+                        @if ($available == 1)
+                            <p class="room-details__availability__title room-details__availability__available">Room
+                                available</p>
+                        @else
+                            <p class="room-details__availability__title room-details__availability__booked">Room booked</p>
+                        @endif
+                    @endif
+
+                </form>
             </div>
             <p class="text-roboto text-roboto--grey room-details__text">
                 {{ $room->cancellation }}
@@ -117,7 +128,7 @@
             <div class="swiper-room-related">
                 <div class="swiper-wrapper">
                     @foreach ($related as $room)
-                        <a href="/room-details.php?id={{ $room->idroom }}">
+                        <a href="{{ url('/rooms/' . $room->idroom) }}">
                             <div class="swiper-slide">
                                 <div class="room room--grid">
                                     <div class="room__container room__container--grid">
@@ -219,7 +230,7 @@
     @endsection
 
     @section('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="{{ url('/https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js') }}"></script>
         <script type="module" src="{{asset("js/index.js")}}"></script>
         <script type="module" src="{{asset("js/slidersRoomDetails.js")}}"></script>
     @endsection

@@ -23,9 +23,9 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">New Details</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a href="#">Blog</a>
+                <a href="{{ url('/contact') }}">Contact</a>
             </div>
         </header>
 
@@ -61,8 +61,9 @@
                     </div>
                     <div class="details__data__text">
                         <p class="title details__data__text__title">Email</p>
-                        <p class="text-roboto text-roboto--grey details__data__text__description">info@webmail.com </p>
-                        <p class="text-roboto text-roboto--grey details__data__text__description">jobs.webmail@mail.com</p>
+                        <p class="text-roboto text-roboto--grey details__data__text__description">
+                            joseferalvarezromero@gmail.com </p>
+                        <p class="text-roboto text-roboto--grey details__data__text__description">j.fer1999@gmail.com</p>
                     </div>
                     <p class="details__data__back">03</p>
                 </div>

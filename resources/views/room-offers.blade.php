@@ -23,9 +23,9 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Our Offers</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a class="topbar__nav__anchor__a" href="#">Offers</a>
+                <a class="topbar__nav__anchor__a" href="{{ url('/offers') }}">Offers</a>
             </div>
         </header>
 
@@ -141,7 +141,6 @@
             </div>
 
             <div class="room-popular__list">
-
                 @foreach ($popular as $room)
                     <div class="room room--grid room-related__room">
                         <div class="room__container room__container--grid">
@@ -192,7 +191,7 @@
     @endsection
 
     @section('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="{{ url('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js') }}"></script>
         <script type="module" src="{{asset("js/index.js")}}"></script>
         <script type="module" src="{{asset("js/slidersRoomOffers.js")}}"></script>
     @endsection

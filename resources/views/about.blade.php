@@ -23,9 +23,9 @@
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">About Us</p>
             <div class="header__links">
-                <a href="/index.php">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a class="topbar__nav__anchor__a" href="#">About</a>
+                <a class="topbar__nav__anchor__a" href="{{ url('/about-us') }}">About</a>
             </div>
         </header>
 
@@ -76,7 +76,7 @@
                     <p class="text-archivo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip.</p>
-                    <a href="/room-grid.php"><button class="button button-golden restaurant__button">TAKE A
+                    <a href="{{ url('/rooms') }}"><button class="button button-golden restaurant__button">TAKE A
                             TOUR</button></a>
                 </div>
             </div>
@@ -276,7 +276,7 @@
     @endsection
 
     @section('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="{{ url('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js') }}"></script>
         <script type="module" src="{{asset("js/index.js")}}"></script>
         <script type="module" src="{{asset("js/slidersAboutUs.js")}}"></script>
     @endsection
