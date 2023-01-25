@@ -31,3 +31,8 @@ git clone https://github.com/JoseFerAlvarez/hotel-miranda-laravel.git
 <img src="https://img.shields.io/badge/-laravel-0D1117?style=for-the-badge&logo=laravel&logoColor=ffffff">
 <img src="https://img.shields.io/badge/-php-0D1117?style=for-the-badge&logo=php&logoColor=ffffff">
 </p>
+
+## Web View ##
+
+<img src="./public/assets/images/preview.png">
+<img src="./public/assets/images/preview2.png">
