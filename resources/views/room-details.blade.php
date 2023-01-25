@@ -178,7 +178,7 @@
 
             <div class="room-related__list">
                 @foreach ($related as $room)
-                    <a href="/room-details.php?id={{ $room->idroom }}">
+                    <a href="{{ url('/rooms/' . $room->idroom) }}">
                         <div class="room room--grid room-related__room">
                             <div class="room__container room__container--grid">
                                 @if ($room->amenities != '')
