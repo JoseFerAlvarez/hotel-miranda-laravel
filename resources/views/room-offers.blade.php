@@ -18,7 +18,7 @@
         @parent
     @endsection
 
-    @section('room-offers-content')
+    @section('content')
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">Our Offers</p>
@@ -62,7 +62,7 @@
                         <div class="room-discount__body">
                             <div class="room-discount__body__text">
                                 <p class="text-roboto text-roboto--grey">{{ $room->cancellation }}</p>
-                                <a href="/room-details.php?id={{ $room->idroom }}"><button
+                                <a href="{{ url('/rooms/' . $room->idroom) }}"><button
                                         class="button button-golden room-discount__body__button">BOOK NOW</button></a>
                             </div>
                             <div class="room-discount__body__facts">
@@ -142,44 +142,46 @@
 
             <div class="room-popular__list">
                 @foreach ($popular as $room)
-                    <div class="room room--grid room-related__room">
-                        <div class="room__container room__container--grid">
-                            @if ($room->amenities != '')
-                                <div class="room__rules room__rules--grid">
-                                    @foreach (explode(',', $room->amenities) as $amenitie)
-                                        @if ($amenitie)
-                                            <img class="room__rules__icon"
-                                                src="{{ asset('assets/bladeicons/' . str_replace(' ', '', strtolower($amenitie)) . '.svg') }}">
-                                        @endif
-                                    @endforeach
-                                </div>
-                            @endif
-                            <div class="room__img room__img--grid"
-                                style="background-image: url('{{ asset($room->photo) }}')">
-                            </div>
-                        </div>
-                        <div class="room__data room__data--grid">
-                            <div class="room__data__text room__data__text--grid">
-                                <p class="room__data__text__title room__data__text__title--grid">
-                                    {{ $room->typeroom }}</p>
-                                <p
-                                    class="text-roboto text-roboto--grey
-                    room__data__text__description room__data__text__description--grid">
-                                    {{ $room->cancellation }}</p>
-                            </div>
-                            <div class="room__data__properties room__data__properties--grid">
-                                <p class="room__data__properties__price room__data__properties__price--grid">
-                                    ${{ $room->price / 100 }}<span
-                                        class="room__data__properties__price__night room__data__properties__price__night--grid">/Night</span>
-                                </p>
-                                @if ($room->status = 0)
-                                    <p class="room__data__properties__availability">Booking Now</p>
-                                @else
-                                    <p class="room__data__properties__availability">Actually Booked</p>
+                    <a href="{{ url('/rooms/' . $room->idroom) }}">
+                        <div class="room room--grid room-related__room">
+                            <div class="room__container room__container--grid">
+                                @if ($room->amenities != '')
+                                    <div class="room__rules room__rules--grid">
+                                        @foreach (explode(',', $room->amenities) as $amenitie)
+                                            @if ($amenitie)
+                                                <img class="room__rules__icon"
+                                                    src="{{ asset('assets/bladeicons/' . str_replace(' ', '', strtolower($amenitie)) . '.svg') }}">
+                                            @endif
+                                        @endforeach
+                                    </div>
                                 @endif
+                                <div class="room__img room__img--grid"
+                                    style="background-image: url('{{ asset($room->photo) }}')">
+                                </div>
+                            </div>
+                            <div class="room__data room__data--grid">
+                                <div class="room__data__text room__data__text--grid">
+                                    <p class="room__data__text__title room__data__text__title--grid">
+                                        {{ $room->typeroom }}</p>
+                                    <p
+                                        class="text-roboto text-roboto--grey
+                    room__data__text__description room__data__text__description--grid">
+                                        {{ $room->cancellation }}</p>
+                                </div>
+                                <div class="room__data__properties room__data__properties--grid">
+                                    <p class="room__data__properties__price room__data__properties__price--grid">
+                                        ${{ $room->price / 100 }}<span
+                                            class="room__data__properties__price__night room__data__properties__price__night--grid">/Night</span>
+                                    </p>
+                                    @if ($room->status = 0)
+                                        <p class="room__data__properties__availability">Booking Now</p>
+                                    @else
+                                        <p class="room__data__properties__availability">Actually Booked</p>
+                                    @endif
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
 
             </div>

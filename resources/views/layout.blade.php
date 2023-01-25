@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css') }}" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css">
-        <title>Document</title>
+        <title>Hotel Miranda</title>
     @show
 </head>
 
@@ -43,10 +43,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="topbar__container__buttons">
-                    <button class="icon-button"><img src="{{ asset('assets/icons/user.svg') }}"></button>
-                    <button class="icon-button"><img src="{{ asset('assets/icons/search.svg') }}"></button>
-                </div>
             </div>
             <div class="topbar__nav">
                 <ul class="topbar__nav__list">
@@ -54,8 +50,7 @@
                             Us</a></li>
                     <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="{{ url('/rooms') }}">Rooms</a>
                     </li>
-                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
-                            href="{{ url('/offers') }}">Offers</a>
+                    <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="{{ url('/offers') }}">Offers</a>
                     </li>
                     <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
                             href="{{ url('/contact') }}">Contact</a>
@@ -69,25 +64,7 @@
         <div class="header__back"></div>
     @show
 
-    @section('index-content')
-    @show
-
-    @section('about-content')
-    @show
-
-    @section('room-grid-content')
-    @show
-
-    @section('room-list-content')
-    @show
-
-    @section('room-details-content')
-    @show
-
-    @section('room-offers-content')
-    @show
-
-    @section('details-content')
+    @section('content')
     @show
 
     @section('footer')

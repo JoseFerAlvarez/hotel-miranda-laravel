@@ -18,7 +18,7 @@
         @parent
     @endsection
 
-    @section('details-content')
+    @section('content')
         <header class="header">
             <p class="subtitle header__text__description">THE ULTIMATE LUXURY EXPERIENCE</p>
             <p class="title header__text__title">New Details</p>
@@ -152,9 +152,7 @@
         <script src="{{ asset('js/hotels.js') }}"></script>
         <script src="{{ asset('js/comunitiesSpain.js') }}"></script>
         <script src="{{ url('https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js') }}"></script>
-        <script async defer
-            src="{{ url('https://maps.googleapis.com/maps/api/js?key=AIzaSyAzhp-gjeksjUKrCvu14fvTA5mAgX8noes&callback=initMap') }}">
-        </script>
+        <script async defer src="{{ url($_ENV['GOOGLE_API_KEY']) }}"></script>
         <script src="{{ asset('js/maps.js') }}"></script>
     @endsection
 </body>
