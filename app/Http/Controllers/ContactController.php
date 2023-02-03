@@ -24,6 +24,6 @@ class ContactController extends Controller
             ]
         );
 
-        return redirect("contact");
+        return redirect("details");
     }
 }

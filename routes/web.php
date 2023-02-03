@@ -18,19 +18,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [RoomController::class, "showIndex"]);
 
-Route::get("about-us", function () {
+Route::get("/about-us", function () {
     return view("about");
 });
 
-Route::get("rooms", [RoomController::class, "showGrid"]);
+Route::get("/rooms", [RoomController::class, "showGrid"]);
 
-Route::get("rooms/{idroom}", [RoomController::class, "showDetails"]);
-Route::post("rooms/{idroom}", [RoomController::class, "getRoomAvailable"]);
+Route::get("/rooms/{idroom}", [RoomController::class, "showDetails"]);
+Route::post("/rooms/{idroom}", [RoomController::class, "getRoomAvailable"]);
 
-Route::get("offers", [RoomController::class, "showOffers"]);
+Route::get("/offers", [RoomController::class, "showOffers"]);
 
-
-Route::get("contact", [ContactController::class, "showContact"]);
-Route::post("contact",[ContactController::class, "insertContact"]);
+Route::get("/details", [ContactController::class, "showContact"]);
+Route::post("/details",[ContactController::class, "insertContact"]);
 
 Route::post("/room-list", [RoomController::class, "getRoomsAvailable"]);

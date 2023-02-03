@@ -25,7 +25,7 @@
             <div class="header__links">
                 <a href="{{ url('/') }}">Home</a>
                 <span>|</span>
-                <a href="{{ url('/contact') }}">Contact</a>
+                <a href="{{ url('/details') }}">Contact</a>
             </div>
         </header>
 

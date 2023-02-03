@@ -39,7 +39,7 @@
                                 href="{{ url('/offers') }}">Offers</a>
                         </li>
                         <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
-                                href="{{ url('/contact') }}">Contact</a>
+                                href="{{ url('/details') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +53,7 @@
                     <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a" href="{{ url('/offers') }}">Offers</a>
                     </li>
                     <li class="topbar__nav__anchor"><a class="topbar__nav__anchor__a"
-                            href="{{ url('/contact') }}">Contact</a>
+                            href="{{ url('/details') }}">Contact</a>
                     </li>
                 </ul>
             </div>
