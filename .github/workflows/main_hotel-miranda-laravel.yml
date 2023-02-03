@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'hotel-miranda-laravel'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CF17A2766F834181875127CD3EA533DA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D7E1B525857049B8A36AA8DD9125A8B4 }}
           package: .
