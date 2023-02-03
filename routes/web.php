@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ContactController;
-use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +27,9 @@ Route::get("/rooms/{idroom}", [RoomController::class, "showDetails"]);
 Route::post("/rooms/{idroom}", [RoomController::class, "getRoomAvailable"]);
 
 Route::get("/offers", [RoomController::class, "showOffers"]);
+Route::post("/room-list", [RoomController::class, "getRoomsAvailable"]);
 
 Route::get("/details", [ContactController::class, "showContact"]);
 Route::post("/details",[ContactController::class, "insertContact"]);
 
-Route::post("/room-list", [RoomController::class, "getRoomsAvailable"]);
+

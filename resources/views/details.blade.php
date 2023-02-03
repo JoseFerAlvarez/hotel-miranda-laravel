@@ -100,7 +100,7 @@
             <div id="map"></div>
             <div class="location-list"></div>
 
-            <form class="details__inputs" action="{{ url('contact') }}" method="POST">
+            <form class="details__inputs" action="{{ url('/details') }}" method="POST">
                 @csrf
                 <div class="details__inputs__group">
                     <div class="details__inputs__column">
