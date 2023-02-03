@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\Room;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -58,5 +59,26 @@ class RoomController extends Controller
         } else {
             return view("room-details", ["room" => json_decode(Room::findOrFail($idroom)), "related" => Room::all()->random(2), "available" => 0]);
         }
+    }
+
+    public function showContact()
+    {
+        return view("details");
+    }
+
+    public function insertContact(Request $request)
+    {
+        Contact::insertOrIgnore(
+            [
+            "customer" => $request->customer,
+            "date" => date('d-m-Y'),
+            "email" => $request->email,
+            "phone" => $request->phone,
+            "header" => $request->header,
+            "comment" => $request->comment
+            ]
+        );
+
+        return view("details");
     }
 }
